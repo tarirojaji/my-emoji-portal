@@ -13,3 +13,16 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+local script run
+```shell
+npx hardhat run scripts/run.js
+```
+start local Ethereum network that stays alive
+```shell
+npx hardhat node
+```
+deploy locally
+```shell
+npx hardhat run scripts/deploy.js --network localhost
+```
