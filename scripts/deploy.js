@@ -5,8 +5,14 @@ const main = async () => {
     console.log('Deploying contracts with account: ', deployer.address);
     console.log('Account balance: ', accountBalance.toString());
   
-    const Token = await hre.ethers.getContractFactory('EmojiPortal');
-    const portal = await Token.deploy();
+    const emojiContractFactory = await hre.ethers.getContractFactory('EmojiPortal');
+    // depoloy contract and fund with some eth
+    const emojiContract = await emojiContractFactory.deploy({
+      value: hre.ethers.utils.parseEther('0.001'),
+    });
+
+    //  wait for deploy
+    const portal = await emojiContract.deployed();
   
     console.log('EmojiPortal address: ', portal.address);
   };

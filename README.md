@@ -26,3 +26,7 @@ deploy locally
 ```shell
 npx hardhat run scripts/deploy.js --network localhost
 ```
+deploy on rinkeby testnet
+```shell
+npx hardhat run scripts/deploy.js --network rinkeby
+```
