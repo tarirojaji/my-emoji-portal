@@ -37,8 +37,10 @@ contract EmojiPortal {
         // make sure the current timestamp is at least 15-minutes bigger than the last timestamp stored
         // if current address => uint + 15min is less than current timestamp the wait 15min
         require(
-            lastEmojiAt[msg.sender] + 15 minutes < block.timestamp,
-            "Wait 15m"
+            // lastEmojiAt[msg.sender] + 15 minutes < block.timestamp,
+            // "Wait 15m"
+            lastEmojiAt[msg.sender] + 30 seconds < block.timestamp,
+            "Wait 30sec"
         );
 
         // Update the current timestamp we have for the user
