@@ -40,8 +40,8 @@ const main = async () => {
   emojiCount = await emojiContract.getTotalEmojis();
   console.log(emojiCount.toNumber());
 
-  // test sending an emoji
-  const emojiTxn = await emojiContract.emoji('emoji #1');
+  // test sending empty emoji
+  const emojiTxn = await emojiContract.emoji('');
   await emojiTxn.wait();
 
   getContractBalance()

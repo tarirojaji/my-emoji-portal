@@ -75,16 +75,6 @@ contract EmojiPortal {
         }
 
         emit NewEmoji(msg.sender, block.timestamp, _message);
-
-        // // set price amount and check if contract balance is enough to fund prize
-        // uint256 prizeAmount = 0.0001 ether;
-        // require(
-        // prizeAmount <= address(this).balance,
-        // "Trying to withdraw more money than the contract has."
-        // );
-        // (bool success, ) = (msg.sender).call{value: prizeAmount}(""); //send prize
-        // require(success, "Failed to withdraw money from contract."); //check if txn was successful
-
     }
 
 
